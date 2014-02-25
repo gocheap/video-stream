@@ -2,15 +2,15 @@
 <?php
 global $options;
 foreach ($options as $value) {
-    if (get_settings($value['id']) === FALSE) {
+    if (get_option($value['id']) === FALSE) {
         $$value['id'] = $value['std'];
     } else {
-        $$value['id'] = get_settings($value['id']);
+        $$value['id'] = get_option($value['id']);
     }
 }
 ?>
 <div id="footer">
-    <div class="wrapper" id="colophon" >        
+    <div id="colophon" >        
         <ul class="footer-link footer-link-left">
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Left Widget Area')) : ?>
                  
@@ -45,22 +45,10 @@ foreach ($options as $value) {
                 </ul>
                 <ul class="footer-connect footer-link-right">
                     <li>
-                        <iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo urlencode(get_bloginfo('url')); ?>&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;colorscheme=dark" scrolling="no" frameborder="0" allowTransparency="true"
-                                style="border:none; overflow:hidden; width:250px; height:50px; color:#fff !important;"></iframe>
-                    </li>
+                       <iframe style="width:80px;height: 25px;" src="//www.facebook.com/plugins/like.php?locale=&amp;layout=button_count&amp;href=<?php echo get_bloginfo('url'); ?>&amp;show_faces=false&amp;action=like" scrolling="no" frameborder="0"></iframe>                    </li>
             <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Right Widget Area')) : ?>
             <?php endif; ?>
                         <div class="clear"></div><li> <h3>Connect With Us</h3>
-                <?php
-                        global $options;
-                        foreach ($options as $value) {
-                            if (get_settings($value['id']) === FALSE) {
-                                $$value['id'] = $value['std'];
-                            } else {
-                                $$value['id'] = get_settings($value['id']);
-                            }
-                        }
-                ?>
 
                         <ul>  <li>
                                 <a href="<?php echo $wpc_twitter_url; ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/twitter.png"  alt="twitter" /><!--  twitter--></a>
@@ -76,7 +64,7 @@ foreach ($options as $value) {
             </div>
         </div>
         <div class="footer-nav clearfix">
-            <div id="wrapper">
+            <div >
                 <div class=" menu-nav" >   <ul class="floatleft footer-menu"><?php wp_list_pages('title_li='); ?></ul></div>
                 <span class="floatright footer-copyright">Theme designed by <a href="http://www.apptha.com/wordpress/" target="_blank">Apptha Themes.</a></span>
 

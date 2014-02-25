@@ -1,6 +1,8 @@
 var winW;
 var winH;
+
     window.onload = function() {
+        
         if (document.body && document.body.offsetWidth) { 
          winW = document.body.offsetWidth;
          winH = document.body.offsetHeight;
@@ -36,9 +38,11 @@ var winH;
     }
 function resize_run()
 {
+    
      if (winW < 600) {
-        $("#menu_selector").addClass("noddclose");
-        $("#navigation").addClass("noddclose");
+        jQuery.noConflict();
+        jQuery("#menu_selector").addClass("noddclose");
+        jQuery("#navigation").addClass("noddclose");
             (function(c){
                 var g=c(window),b=window.Demopage={
                     init:function(){
@@ -81,7 +85,7 @@ function resize_run()
 
     }
     else{        
-        $("#menu_selector").removeClass("noddclose");
-        $("#navigation").removeClass("noddclose");
+        jQuery("#menu_selector").removeClass("noddclose");
+        jQuery("#navigation").removeClass("noddclose");
     }
 }

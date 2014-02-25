@@ -8,6 +8,7 @@
          * called loop-single.php and that will be used instead.
          */
         get_template_part('loop', 'single');
+        comments_template();
         ?>
     </div><!-- #content -->
 </div><!-- #container -->

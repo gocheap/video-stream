@@ -1,5 +1,5 @@
 /*
-Theme Name: Video tube
+Theme Name: Video Stream
 */
 /*
 RTL Basics
@@ -270,3 +270,30 @@ div.menu li{
 	padding-right: 20px;
 	padding-left: 0;
 }
+
+
+/***************************************************************************************/
+
+#gallery_banner_list ul li .nav_container .page-thumb-img {float: right;margin-left: 5px;}
+#gallery_banner_list ul li .nav_container .slide_video_info {float: right;}
+#navigation li {float: right;}
+
+.rtl .video-block:first-child {margin-right: 0px !important;}
+.rtl .video-block {margin-right: 15px !important; margin-left: 0 !important;}
+.imgBorder {margin-left: 4%; margin-right:0;}
+.side_video_info {float: right !important;margin-right: 0;}
+.ratethis1 {float: right;}
+.video-block .vid_info .video_views {float: left;}
+.video-more {float: left;}
+.side_video_info {width: 44%;}
+#header .widget_search input[type="text"]{float: right;}
+#featured .lof-slidecontent {float: left;}
+
+@media screen and (max-width: 600px) and (min-width: 280px){
+    #header .widget_search input[type="submit"] {float: left;}
+    #header .socialwidgets li {margin: auto !important;}
+}
+
+
+
+

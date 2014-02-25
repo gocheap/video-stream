@@ -30,10 +30,10 @@ if ($paged >= 2 || $page >= 2)
           <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/i7-style.css" type="text/css" media="screen" />
         <![endif]-->
         <link href='http://fonts.googleapis.com/css?family=Nobile' rel='stylesheet' type='text/css'>
-        <link type="image/vnd.microsoft.icon" rel="shortcut icon" href="http://www.apptha.com/templates/apptha/favicon.ico"/>    
+        <link type="image/vnd.microsoft.icon" rel="shortcut icon" href="<?php get_bloginfo('template_url');?>/images/favicon.ico"/>    
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-        <script language="javascript" type="text/javascript" src="<?php echo get_bloginfo('url'); ?>/wp-content/plugins/contus-video-gallery/js/jquery-1.3.2.min.js"></script>
-        <script language="javascript" type="text/javascript" src="<?php echo get_bloginfo('url'); ?>/wp-content/plugins/contus-video-gallery/js/jquery-ui-1.7.1.custom.min.js"></script>
+<!--        <script language="javascript" type="text/javascript" src="<?php echo get_bloginfo('url'); ?>/wp-content/plugins/contus-video-gallery/js/jquery-1.3.2.min.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php echo get_bloginfo('url'); ?>/wp-content/plugins/contus-video-gallery/js/jquery-ui-1.7.1.custom.min.js"></script>-->
 
         <script language="javascript" type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custommenu.js"></script>
 
@@ -55,10 +55,10 @@ if ($paged >= 2 || $page >= 2)
                          <?php
                         global $options;
                         foreach ($options as $value) {
-                            if (get_settings($value['id']) === FALSE) {
+                            if (get_option($value['id']) === FALSE) {
                                 $$value['id'] = $value['std'];
                             } else {
-                                $$value['id'] = get_settings($value['id']);
+                                $$value['id'] = get_option($value['id']);
                             }
                         }
                         if (empty($wpc_logo_url)) {
@@ -84,11 +84,9 @@ if ($paged >= 2 || $page >= 2)
                          <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Header Widget Area')) : ?>
                          <?php endif; ?>       
                         </div>
-                    </div>
-
-
-                    <div class="clear"></div>
-                    <div id="branding" role="banner">
+                    </div><!-- header right -->
+                       <div class="clear"></div>
+                       <div id="branding" role="banner"> <!-- branding-->
                         <!-- main menu -->
                         <div id="mainmenu">
                           <h3 id="menu_selector" class="  ">
@@ -119,12 +117,14 @@ if ($paged >= 2 || $page >= 2)
                              <?php endif;?> 
                             </ul>
                              
-                            </div>
-                    </div><!-- #masthead -->
-                </div><!-- #header -->                 
-            </div>
-        </div>
-                                <!-- #header -->
+                            </div> <!--main menu -->
+                            </div><!-- branding-->
+                    <div class="clear"></div>                                                                         
+                     
+                </div>  <!-- #masthead -->            
+            </div> <!-- #header --> 
+        </div><!-- #wrapper -->
+                                
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Banner Widget Area')) : ?>
 
             <?php endif; ?>

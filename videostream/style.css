@@ -1,16 +1,5 @@
 /*
 Theme Name: Video stream
-Theme URI: http://apptha.com
-Description: Video stream is a premium wordpress template with well toned visual structure suitable for building a video sharing website. The theme has a high qualitative, expressive banner with slideshow effect at the header. The template displays categories, recent post, and popular tags in widgets giving the template a unique and elegant look. The wordpress theme has thumbnails for Recent, Popular and Featured videos displayed in the frontpage with pagination. Boast your product updates with twitter feed field and connect with to media via twitter, facebook and linkedin icons.
-Author: Apptha Team
-Author URI: http://www.apptha.com
-Version: 1.0
-Tags: Apptha-musix, video-gallery, Video stream, Video banner, Video, Music
-Copyright (C) 2011. All rights reserved
-*/
-
-/*
-Theme Name: Video stream
 Theme URI: http://apptha.com/
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
@@ -92,13 +81,13 @@ LAYOUT: Two columns
 DESCRIPTION: Two-column fixed layout with one sidebar right of content
 */
 #container {
-    float: left;
+    float: left;width: 67%;
 }
 #content {
 
 }
 #primary,#secondary {
-    float: right;
+    float: right;width: 31.6%;
     overflow: hidden;
     margin-left:10px;
  }
@@ -108,7 +97,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 }
 #footer {
     clear: both;
-    width: 100%;
+    width: 100%;margin:0px auto;
 }
 /*
 LAYOUT: One column, no sidebar
@@ -159,7 +148,7 @@ code {
 #access .menu-header,
 div.menu,
 #colophon
-{ clear:both;margin: 0 auto;}
+{ clear:both;margin: 0 auto;width:960px;}
 #main
 {
    background:#eeeff1;
@@ -169,11 +158,11 @@ div.menu,
    min-height:250px;
    border-bottom:#CBCBCC 1px solid;
    padding:10px;
-   margin-bottom:10px;
+   margin-bottom:10px;width: 940px;
 }
 
 #wrapper {
-    margin: 0 auto;clear:both;
+    margin: 0 auto;clear:both;width:960px;
 }
 /* Structure the footer area */
 #footer-widget-area {
@@ -393,18 +382,21 @@ background: #363638 url(./images/menu_bg.png) repeat-x top;
 -------------------------------------------------------------- */
 #mainmenu{
     border: 1px solid rgba(0,0,2,0.8);
-    height: 25px;
     box-shadow: inset 0 1px 0 rgba(253,253,255,0.2), 0 1px 1px rgba(0,0,2,0.2);
     border-radius: 7px;
     margin-bottom: 8px;
     background:#363638 url(./images/menu_bg.png) repeat-x top;
-    padding: 8px;}
+    padding: 8px;
+    height: auto;
+    width:942px;
+    float: left;
+}
 
 #navigation {
     font-size:12px;display: block;
     margin-bottom:8px;
     list-style: none;color: #EEE;z-index: 3000;}
-#navigation li {float: left;list-style: none;margin:0;}
+#navigation li {float: left;list-style: none;margin:2px;}
 #navigation li a:hover{color:#282828;background:#8895a0;z-index:9000}#navigation a.current,
 #navigation a.current:hover{color:#fff;background:#0daaa7;z-index:9000}
 #navigation li ul li {background:none;float: left; padding: 0px !important; margin: 0;}
@@ -1379,7 +1371,7 @@ font-size: 12px;
 }
 .footer-link-right input[type="submit"]{float:right;margin-top:5px;font-weight: bold; }
 .footer-link {
-    float: left;
+    float: left;width: 24%;
     min-height: 160px;
 }
 .footer-nav{padding:6px 0;background: #cbdcde;border-top: #98b7c0 3px solid;}
@@ -1581,7 +1573,7 @@ h2.video_header, .video_wrapper h2
 {
 background: url(./images/title-bg.gif) repeat-x;
 margin-bottom: 5px;
-padding: 7px;
+padding: 7px;height:18px;
 border: 1px solid #d2d2d4;
 border: 1px solid rgba(0,0,2,0.15);
 border-bottom-color: #a2a2a4;
@@ -1597,7 +1589,7 @@ padding:1px 10px 1px 4px;
     -webkit-border-radius:2px 2px;
     font-size:11px;
     font-family:arial;
-    margin-top:3px;
+    margin:3px 0 10px;
     background: #5487A5;
     color: #fff;
 }
@@ -1815,10 +1807,10 @@ display: block;
 padding-bottom: 2px;
 line-height: 14px;}
  h5{clear: both;}
- .video_title h5{line-height:10px;}
+.video_title h5{line-height:10px;}
 
- #contus-banner-slideshow{margin: 0 auto;width: 960px;overflow: hidden; position: relative;}
- #contus-banner-slideshow #featured ul.ui-tabs-nav li.ui-tabs-selected {
+ #stream_banner{margin: 0 auto;width: 960px;overflow: hidden; position: relative;}
+ #stream_banner #featured ul.ui-tabs-nav li.ui-tabs-selected {
 overflow: hidden;
 background: url(./images/slidenav_bkg_active.png)
  no-repeat left center;
@@ -1882,11 +1874,11 @@ float: right;
 font-size: 12px;
 }
 
-#contus-banner-slideshow .right_side {
+#stream_banner .right_side {
 float: right; 
-/*margin-left: 289px;*/
+width:100%;
 }
-#contus-banner-slideshow .lof-navigator-outer {
+#stream_banner .lof-navigator-outer {
 float:left;
 right: inherit;
 z-index: 100;
@@ -1907,7 +1899,7 @@ top: 51px;
 position: absolute;
 }
 /** Banner Css **/
-#featured {width: 960px;}
+#featured {width: 960px;margin:0px auto;}
 #featured .lof-slidecontent {
 	position: relative;
 	overflow: hidden;
@@ -2187,14 +2179,14 @@ ul.video-page-info{width: 50% !important}
 .widget_search input[type="text"]{ width: 175px;}
 .video-block .duration {position: absolute;top: 55px;}
 .video-block-container .video-block a img, .video-block-container .video-block img {}
-.video-block-container .video-block {padding-right: 0;}
+.video-block-container .video-block {padding-right: 0;max-height: 145px;}
 .video-block h5 a{height: auto !important;}
 #mediaspace{display: none;}
 .video-page-container .video-page-info, 
 .entry-content .video-page-container .video-page-category{padding: 0;}
 .entry-content .video-page-container .video-page-tag {padding-bottom: 10px;}
 .video-block .video_duration {bottom: 4px; padding: 1px 3px;}
-.ulwidget .imgBorder .video_duration {bottom: 1px;}
+.ulwidget .imgBorder .video_duration {bottom: 4px;}
 
 /*    Video Page     **/
 .videogallery .entry-meta{display: none;}
@@ -2205,5 +2197,14 @@ ul.video-page-info{width: 50% !important}
 #navigation.noddclose{display: none;}
 #menu_selector{display: none;}
 #menu_selector.noddclose{display: block;}
+#navigation #videos-category.sidebar-wrap .videoHname {height: auto;min-height: initial;}
 
-
+video, embed, iframe, object {
+max-width: 100%;
+}
+#stream_banner {
+margin: 0 auto;
+width: 960px;
+overflow: hidden;
+position: relative;
+}
